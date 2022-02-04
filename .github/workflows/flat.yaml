@@ -4,7 +4,10 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch:
+    paths:
+      - .github/workflows/flat.yml
+      - ./postprocess.ts
+  workflow_dispatch: {}
   schedule:
     - cron: '*/20 7-23 * * *'
 
