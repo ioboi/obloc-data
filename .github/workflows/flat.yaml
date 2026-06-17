@@ -24,6 +24,6 @@ jobs:
       - name: Fetch data
         uses: githubocto/flat@v3
         with:
-          http_url: https://obloc.ch/cms/wp-content/plugins/guestcounter/utilization.php
+          http_url: https://obloc.ch/_cmsbox_backends_/obloc/guestcounter/
           downloaded_filename: fetched.txt
           postprocess: postprocess.ts

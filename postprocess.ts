@@ -5,7 +5,7 @@ const content = (await Deno.readTextFile(filename)).trim();
 
 const data = {
     date: new Date().toISOString(),
-    value: parseInt(content) / 100.0,
+    value: parseInt(JSON.parse(content)) / 100.0,
 };
 
 await Deno.writeTextFile(OUTPUT_FILE, `${data.date},${data.value}\n`, { append: true });
